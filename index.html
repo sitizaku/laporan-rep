@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laporan Penjualan Rep</title>
+<meta name="description" content="Sistem pelaporan penjualan obat untuk Rep dan Prinsipal.">
+<meta name="theme-color" content="#1d5a9e">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Laporan Rep">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{--bg:#f3f5f8;--card:#fff;--ink:#18222f;--muted:#5d6b7c;--brand:#1d5a9e;--brand-ink:#fff;--line:#d6dde6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161e;--card:#18212c;--ink:#e4ebf3;--muted:#9aa9ba;--brand:#5b9be0;--brand-ink:#0b1420;--line:#2c3a4a}}
+:root[data-theme="dark"]{--bg:#10161e;--card:#18212c;--ink:#e4ebf3;--muted:#9aa9ba;--brand:#5b9be0;--brand-ink:#0b1420;--line:#2c3a4a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 22px;max-width:400px;width:100%;text-align:center}
+.logo{width:140px;height:140px;border-radius:50%;display:block;margin:0 auto 12px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+h1{margin:0 0 4px;font-size:22px;color:var(--brand)}
+p{margin:0 0 16px;color:var(--muted)}
+.btn{display:block;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600;padding:14px;border-radius:10px;font-size:16px}
+details{margin-top:18px;text-align:left;border-top:1px solid var(--line);padding-top:14px}
+summary{cursor:pointer;font-weight:600}
+ol{padding-left:20px;margin:8px 0 0;color:var(--muted)}
+li{margin-bottom:6px}
+</style>
+</head>
+<body>
+<main class="card">
+  <img class="logo" src="icon-512.png" alt="Logo Principle – PT. Medika Lestari Abadi">
+  <h1>Laporan Penjualan Rep</h1>
+  <p>Pelaporan penjualan obat untuk Rep dan Prinsipal</p>
+  <a class="btn" id="go" href="#">Buka Aplikasi</a>
+  <details>
+    <summary>Pasang ikon di layar HP</summary>
+    <ol>
+      <li><b>Android (Chrome):</b> ketuk titik tiga di kanan atas, pilih <b>Tambahkan ke layar utama</b>, lalu <b>Tambahkan</b>.</li>
+      <li><b>iPhone (Safari):</b> ketuk tombol <b>Bagikan</b>, pilih <b>Tambah ke Layar Utama</b>, lalu <b>Tambah</b>.</li>
+      <li>Setelah itu buka aplikasi dari ikon logo di layar HP.</li>
+    </ol>
+  </details>
+</main>
+<script>
+var APP = ['https:', '', 'script.google.com', 'macros', 's', 'AKfycbwpcI4FgTkaAVoX-0FxsxUr7sNVq9G6VViEJsBDPTMcBwq-K4IF-y-sdLyKEaGGMiWD1w', 'exec'].join('/');
+document.getElementById('go').href = APP;
+var standalone = window.navigator.standalone === true ||
+  (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+if (standalone || /[?&]go=1/.test(location.search)) location.replace(APP);
+</script>
+</body>
+</html>
